@@ -8,16 +8,19 @@ from flask import Blueprint, render_template, request
 
 Oth = Blueprint('Oth',__name__)
 
-def get_pokemon_data(pokemonname):
-    get_response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokemonname}")
+def get_weather_data(weatheroption)
 
-    return get_response
+    base_url = "https://api.openweathermap.org/data/2.5/weather?q="
+    api_key = "f22d7397d3b69de53f3df6ae2d87946e"
+    url = f"{base_url}{weatheroption}&appid={api_key}"
+
+    respone = requests.get()
 
 @Oth.route('/', methods=["POST","GET"])   # Focus here
 def Home():
     if request.method == 'POST':
     
-        pokemonname = request.form.get("Poke-name")
+         
 
         
 
